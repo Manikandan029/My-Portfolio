@@ -36,40 +36,26 @@
 }
 
 
-
-/* Light Mode (Default) */
+/* Default Light Mode */
 body {
-  @apply bg-neutral-800 text-white;
+  background-color: white;
+  color: black;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 /* Dark Mode */
-.dark body {
-  @apply bg-white text-black;
+body.dark-mode {
+  background-color: #121212;
+  color: white;
 }
 
 /* Button Styling */
-.dark .toggle-button {
-  @apply bg-gray-700 text-white;
+.dark-mode-btn {
+  background-color: #ddd;
+  color: black;
 }
 
-.toggle-button {
-  @apply bg-gray-300 text-black;
-}
-
-/* Social Icons */
-.dark .icon {
-  @apply text-gray-700 hover:text-green-500;
-}
-
-.icon {
-  @apply text-gray-400 hover:text-green-600;
-}
-
-/* Resume Button */
-.dark .resume-btn {
-  @apply bg-green-400 hover:bg-green-500 text-black;
-}
-
-.resume-btn {
-  @apply bg-green-500 hover:bg-green-600 text-black;
+body.dark-mode .dark-mode-btn {
+  background-color: #333;
+  color: white;
 }

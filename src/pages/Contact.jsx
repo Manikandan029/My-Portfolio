@@ -58,7 +58,7 @@ export default function Contact() {
 
     return (
         <>
-        <div className="bg-neutral-800 ">
+        <div className="bg-neutral-800 -ml-48 pl-25 pt-10" >
             <motion.h1
             initial={{ opacity:0, x:-30}}
             animate={{ opacity:1,x:0}}
@@ -68,7 +68,7 @@ export default function Contact() {
             <span className="h-0.75 w-40 bg-green-300 absolute ml-15 mt-2"></span>
         </div>
         
-        <div className="min-h-screen bg-neutral-800 flex items-center justify-center mt-0 ">
+        <div className="min-h-screen bg-neutral-800 flex items-center justify-center  -ml-48 ">
             
             <div className="max-w-4xl w-full mx-auto p-8 bg-stone-800 rounded-lg shadow-md text-white shodow-lg"> 
                 <h1 className="text-3xl text-green-300 font-bold mb-4 text-center">SEND ME AN EMAIL</h1>

@@ -15,18 +15,18 @@ function Certicates() {
     const [activeCategory, setActiveCategory] = useState('curriculam'); // State to track the active category
 
     return (
-        <div className="bg-neutral-800 min-h-screen text-white px-5 py-10">
+        <div className="bg-neutral-800 min-h-screen text-white px-5 py-15 pt-25  -ml-48">
 
             <motion.h1
                 
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: 'spring', stiffness: 60 }}
-                className="text-4xl ml-5 pt-5 font-medium text-white mb-5 -mt-5 max-w-full sm:text-3xl">Certificates
+                className="text-4xl ml-5 pt-5 font-medium text-white mb-5 -mt-5 max-w-full sm:text-3xl pl-15">Certificates
             </motion.h1>
-            <span className="h-0.75 w-40 bg-green-300 absolute ml-5 -mt-4 "></span>
+            <span className="h-0.75 w-40 bg-green-300 absolute ml-20 -mt-4 "></span>
 
-            <div className="mx-w-30 flex gap-10 mt-8 ">
+            <div className="mx-w-30 flex gap-10 mt-8 pl-15">
                 <motion.p
                     
                     whileHover={{ scale: 1.05 }}
