@@ -1,0 +1,75 @@
+@import "tailwindcss";
+@layer components {
+  .nav-link {
+    @apply relative pb-2 transition duration-400 text-white hover:text-green-300;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-green-300 transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+}
+
+
+@keyframes slideInRight {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  50% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+}
+
+.character-animation {
+  display: inline-block;
+  animation: slideInRight 2s ease-in-out infinite;
+}
+
+
+
+/* Light Mode (Default) */
+body {
+  @apply bg-neutral-800 text-white;
+}
+
+/* Dark Mode */
+.dark body {
+  @apply bg-white text-black;
+}
+
+/* Button Styling */
+.dark .toggle-button {
+  @apply bg-gray-700 text-white;
+}
+
+.toggle-button {
+  @apply bg-gray-300 text-black;
+}
+
+/* Social Icons */
+.dark .icon {
+  @apply text-gray-700 hover:text-green-500;
+}
+
+.icon {
+  @apply text-gray-400 hover:text-green-600;
+}
+
+/* Resume Button */
+.dark .resume-btn {
+  @apply bg-green-400 hover:bg-green-500 text-black;
+}
+
+.resume-btn {
+  @apply bg-green-500 hover:bg-green-600 text-black;
+}
