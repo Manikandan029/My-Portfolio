@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Hospital Management Software",
+        "description": "A software solution for managing hospital operations including patient records, billing, and staff management.",
+        "skills": "HTML, CSS, JavaScript, PHP, MySQL",
+        "link": "https://github.com/Manikandan029/Hospital_Software"
+    },
+    {
+        "title": "Movie Application",
+        "description": "A dynamic movie application built with React and Tailwind CSS, fetching data from a JSON source.",
+        "skills": "React, Tailwind CSS",
+        "link": "https://mk-movie-application.netlify.app"
+    },
+    {
+        "title": "Restaurant Application",
+        "description": "A restaurant web application built with React and Tailwind CSS, featuring table bookings and contact information.",
+        "skills": "React, Tailwind CSS",
+        "link": "https://mk-food-restaurant.netlify.app/"
+    },
+    {
+        "title": "YouTube Clone",
+        "description": "A YouTube clone built with HTML, CSS, and JavaScript that mimics the functionality of the video-sharing platform.",
+        "skills": "HTML, CSS, JavaScript",
+        "link": "https://manikandan029.github.io/Youtube-clone/"
+    },
+    {
+        "title": "Travel Website",
+        "description": "A responsive travel website built with HTML, CSS, and JavaScript, showcasing travel packages and destinations.",
+        "skills": "HTML, CSS, JavaScript",
+        "link": "https://manikandan029.github.io/Travel-App"
+    },
+    {
+        "title": "Weather App",
+        "description": "A weather app built using HTML, CSS, and JavaScript that fetches data from a weather API to display the forecast.",
+        "skills": "HTML, CSS, JavaScript, API",
+        "link": "https://manikandan029.github.io/Weather-App/"
+    },
+    {
+        "title": "Tic-Tac-Toe",
+        "description": "A simple Tic-Tac-Toe game built using HTML, CSS, and JavaScript with a turn-based play logic.",
+        "skills": "HTML, CSS, JavaScript",
+        "link": "https://manikandan029.github.io/Tic-Tac-Toe/"
+    },
+    {
+        "title": "Stopwatch App",
+        "description": "A simple stopwatch application developed using HTML, CSS, and JavaScript with start, stop, and reset functionalities.",
+        "skills": "HTML, CSS, JavaScript",
+        "link": "https://manikandan029.github.io/Stopwatch-App/"
+    }
+]

@@ -36,26 +36,3 @@
 }
 
 
-/* Default Light Mode */
-body {
-  background-color: white;
-  color: black;
-  transition: background-color 0.4s ease, color 0.4s ease;
-}
-
-/* Dark Mode */
-body.dark-mode {
-  background-color: #121212;
-  color: white;
-}
-
-/* Button Styling */
-.dark-mode-btn {
-  background-color: #ddd;
-  color: black;
-}
-
-body.dark-mode .dark-mode-btn {
-  background-color: #333;
-  color: white;
-}

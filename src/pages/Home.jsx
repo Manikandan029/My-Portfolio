@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import Image1 from "../assets/portfolio1.png";
 import { motion } from "framer-motion";
 import resume from "../assets/resume.pdf";
-import ToggleButton from "../components/ToggleButton";
+// import ParticlesBackground from "../components/ParticlesBackground";
 
 function HomePage() {
   const text = "Front-End Developer".split("");
@@ -11,8 +11,9 @@ function HomePage() {
     <>
   
       {/* Added pt-16 to prevent content from going under the navbar */}
-      <div className="bg-neutral-800 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 -ml-48 pt-16 ">
-        
+      <div className="bg-neutral-800 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 pt-16 "
+      >
+         {/* <ParticlesBackground /> */}
         {/* Left Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -73,7 +74,7 @@ function HomePage() {
             {[
               { href: "https://github.com/Manikandan029", icon: <FaGithub />, color: "hover:text-green-600" },
               { href: "https://www.linkedin.com/in/-manikandan-m", icon: <FaLinkedin />, color: "hover:text-blue-600" },
-              { href: "https://www.instagram.com/yourhandle", icon: <FaInstagram />, color: "hover:text-pink-600" },
+              { href: "https://www.instagram.com/.manikandan._/", icon: <FaInstagram />, color: "hover:text-pink-600" },
               { href: "mailto:manivagaimk@gmail.com", icon: <FaEnvelope />, color: "hover:text-yellow-400" },
             ].map(({ href, icon, color }, index) => (
               <motion.a

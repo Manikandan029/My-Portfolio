@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { div } from "framer-motion/client";
+import bgImage from "../assets/contact.jpg";
 
 export default function Contact() {
     const [showSuccess, setShowSuccess] = useState(false);
@@ -27,7 +27,7 @@ export default function Contact() {
         const object = Object.fromEntries(formDataToSubmit);
         const json = JSON.stringify(object);
 
-        console.log("Form data to submit:", object); // Log the form data
+        console.log("Form data to submit:", object); 
 
         const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -42,9 +42,8 @@ export default function Contact() {
             setShowSuccess(true);
             setTimeout(() => {
                 setShowSuccess(false);
-            }, 5000); // Hide the popup after 5 seconds
+            }, 5000); 
 
-            // Clear form after submission (optional)
             setFormData({
                 name: '',
                 email: '',
@@ -58,106 +57,150 @@ export default function Contact() {
 
     return (
         <>
-        <div className="bg-neutral-800 -ml-48 pl-25 pt-10" >
-            <motion.h1
-            initial={{ opacity:0, x:-30}}
-            animate={{ opacity:1,x:0}}
-            transition={{  type:'spring', stiffness:60}} 
-            className="bg-neutral-800 ml-15 pt-15 text-3xl text-white ">Contact me
-            </motion.h1>
-            <span className="h-0.75 w-40 bg-green-300 absolute ml-15 mt-2"></span>
-        </div>
-        
-        <div className="min-h-screen bg-neutral-800 flex items-center justify-center  -ml-48 ">
-            
-            <div className="max-w-4xl w-full mx-auto p-8 bg-stone-800 rounded-lg shadow-md text-white shodow-lg"> 
-                <h1 className="text-3xl text-green-300 font-bold mb-4 text-center">SEND ME AN EMAIL</h1>
-                <p className="text-lg  text-white mb-6 text-center">
-                Feel free to reach out for collaborations, inquiries, or to discuss how we can bring your ideas to life with creative and innovative solutions. Let’s connect!...
-                </p>
-                <form onSubmit={handleSubmit}>
-                    <div className="space-y-10">
-                        <div className="flex flex-col md:flex-row justify-between md:space-x-4">
-                            <div className="flex flex-col w-full">
-                                <label htmlFor="name" className="text-white mb-1 font-bold">Name:</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    placeholder="Enter your Name"
-                                    className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full  "
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    name="name"
-                                    required
-                                />
-                            </div>
-                            <div className="flex flex-col w-full">
-                                <label htmlFor="email" className="text-white mb-1 font-bold">Email:</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    placeholder="Enter your Email"
-                                    className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
-                                    value={formData.email}
-                                    onChange={handleChange}
-                                    name="email"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div className="flex flex-col md:flex-row justify-between md:space-x-4">
-                            <div className="flex flex-col w-full">
-                                <label htmlFor="subject" className="text-white mb-1 font-bold">Subject:</label>
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    placeholder="What's the subject?"
-                                    className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
-                                    value={formData.subject}
-                                    onChange={handleChange}
-                                    name="subject"
-                                    required
-                                />
-                            </div>
-                        </div>
-                        <div className="flex flex-col">
-                            <label htmlFor="message" className="text-white mb-1 font-bold">Message:</label>
-                            <textarea
-                                id="message"
-                                placeholder="Write your message"
-                                className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 h-32 resize-none w-full"
-                                value={formData.message}
-                                onChange={handleChange}
-                                name="message"
-                                required
-                            />
-                        </div>
-                        <div className="flex justify-center mt-4">
-                            <button
-                                type="submit"
-                                className="w-full px-4 py-2 bg-green-400 text-white font-semibold rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
-                            >
-                                Send
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            {showSuccess && (
-                <div className="fixed top-10 left-1/2 transform -translate-x-1/2 w-3/4 md:w-1/3 bg-black border-2 border-green-500 p-4 rounded-lg shadow-lg text-white z-50">
-                    <div className="flex justify-between items-center mb-2">
-                        <h2 className="text-xl font-bold">Success!</h2>
-                        <button onClick={() => setShowSuccess(false)} className="text-white">
-                            <AiOutlineClose size={24} />
-                        </button>
-                    </div>
-                    <p className="mb-4">Your message has been sent successfully.</p>
-                    <div className="w-full bg-gray-200 rounded-full h-1">
-                        <div className="bg-green-500 h-1 rounded-full animate-reduce-width"></div>
+            <div style={{ backgroundImage: `url(${bgImage})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat"}} 
+                className="w-full min-h-screen"
+            >
+                <div className="pt-10 px-6 md:px-16">
+                    <div className="flex flex-col items-center md:items-start mb-4">
+                        <motion.h1
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ type: 'spring', stiffness: 60 }}
+                            viewport={{ once: true }}
+                            className="pt-15 text-3xl text-white pl-0 md:pl-40"
+                        >
+                            Contact me
+                        </motion.h1>
+                        <motion.span 
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                            className="h-[3px] w-40 bg-green-300 self-center md:self-start md:ml-40 origin-left"
+                        />
                     </div>
                 </div>
-            )}
-        </div>
+
+                <div className="min-h-screen flex items-center justify-center">
+                    <motion.div 
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="max-w-4xl w-full mx-auto backdrop-blur-md border-2 bg-white/20 rounded-lg shadow-md text-white p-5"
+                    > 
+                        <motion.h1 
+                            initial={{ opacity: 0, y: -20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            viewport={{ once: true }}
+                            className="text-3xl text-green-300 font-bold mb-4 text-center"
+                        >
+                            SEND ME AN EMAIL
+                        </motion.h1>
+                        <motion.p 
+                            initial={{ opacity: 0, y: -20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="text-lg text-white mb-6 text-center"
+                        >
+                            Feel free to reach out for collaborations, inquiries, or to discuss how we can bring your ideas to life with creative and innovative solutions. Let’s connect!
+                        </motion.p>
+                        <form onSubmit={handleSubmit}>
+                            <div className="space-y-10">
+                                <div className="flex flex-col md:flex-row justify-between md:space-x-4">
+                                    <div className="flex flex-col w-full">
+                                        <label htmlFor="name" className="text-white mb-1 font-bold">Name:</label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            placeholder="Enter your Name"
+                                            className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            name="name"
+                                            required
+                                        />
+                                    </div>
+                                    <div className="flex flex-col w-full">
+                                        <label htmlFor="email" className="text-white mb-1 font-bold">Email:</label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            placeholder="Enter your Email"
+                                            className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            name="email"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col md:flex-row justify-between md:space-x-4">
+                                    <div className="flex flex-col w-full">
+                                        <label htmlFor="subject" className="text-white mb-1 font-bold">Subject:</label>
+                                        <input
+                                            type="text"
+                                            id="subject"
+                                            placeholder="What's the subject?"
+                                            className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 w-full"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            name="subject"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <div className="flex flex-col">
+                                    <label htmlFor="message" className="text-white mb-1 font-bold">Message:</label>
+                                    <textarea
+                                        id="message"
+                                        placeholder="Write your message"
+                                        className="p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 h-32 resize-none w-full"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        name="message"
+                                        required
+                                    />
+                                </div>
+                                <motion.div 
+                                    whileHover={{ scale: 1.05 }}
+                                    className="flex justify-center mt-4"
+                                >
+                                    <button
+                                        type="submit"
+                                        className="w-full px-4 py-2 bg-green-400 text-white font-semibold rounded-full shadow-md hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-600 focus:ring-opacity-50"
+                                    >
+                                        Send
+                                    </button>
+                                </motion.div>
+                            </div>
+                        </form>
+                    </motion.div>
+
+                    {showSuccess && (
+                        <motion.div 
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.5 }}
+                            className="fixed top-10 left-1/2 transform -translate-x-1/2 w-3/4 md:w-1/3 bg-black border-2 border-green-500 p-4 rounded-lg shadow-lg text-white z-50"
+                        >
+                            <div className="flex justify-between items-center mb-2">
+                                <h2 className="text-xl font-bold">Success!</h2>
+                                <button onClick={() => setShowSuccess(false)} className="text-white">
+                                    <AiOutlineClose size={24} />
+                                </button>
+                            </div>
+                            <p>Your message has been sent successfully.</p>
+                        </motion.div>
+                    )}
+                </div>
+            </div>
         </>
     );
 }

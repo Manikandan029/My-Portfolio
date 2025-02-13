@@ -14,7 +14,7 @@ function App() {
                 <Navbar />
                 
                 {/* Content Area: This will display based on the route */}
-                <div className="flex-1 ml-48"> {/* Adjust for Navbar space */}
+                <div className="flex-1 "> {/* Adjust for Navbar space */}
                     <Routes>
                         {/* Default Route: Home will be displayed initially */}
                         <Route path="/" element={<Home />} />
