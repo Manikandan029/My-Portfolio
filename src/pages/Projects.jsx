@@ -8,7 +8,7 @@ import Image3 from '../assets/Restourent.png';
 import Image4 from '../assets/YouTube.png';
 import Image5 from '../assets/Travel.png';
 import Image6 from '../assets/Weather1.png';
-import Image7 from '../assets/tt1.PNG';
+import Image7 from '../assets/Tic.png';
 import Image8 from '../assets/Stopwatch1.png';
 
 const images = [Image1, Image2, Image3, Image4, Image5, Image6, Image7, Image8];
