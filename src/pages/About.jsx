@@ -18,7 +18,7 @@ function About() {
         initial={{ opacity: 0, x: -30 }} 
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 4.0, type: "spring", stiffness: 80 }}
-        className="text-4xl sm:text-3xl font-medium text-white mb-5 max-w-full"
+        className="text-3xl sm:text-3xl font-medium text-white mb-5 max-w-full"
       >
         About Me
       </motion.h1>
@@ -43,7 +43,7 @@ function About() {
       </motion.p>
 
       <div className=" bg-neutral-800 text-white rounded-xl mt-5">
-        <h2 className="text-3xl sm:text-2xl font-bold mb-6 ">My Skills</h2>
+        <h2 className="text-2xl sm:text-2xl font-bold mb-6 ">My Skills</h2>
         {skills.map((skill, index) => (
           <div key={index} className="mb-4">
             <div className="flex justify-between mb-1 ">
@@ -68,7 +68,7 @@ function About() {
     
             {/* Education section */}
 
-            <div className="flex flex-col sm:flex-row sm:gap-10 gap-6  mt-10 ">
+            <div className="flex flex-col sm:flex-row sm:gap-10 gap-3   mt-10 ">
     {/* College section */}
     <div className="border border-black mb-6 sm:mb-0 mx-auto sm:mx-5 w-full sm:w-1/2 bg-neutral-890 shadow-2xl">
     <h3 className="text-white font-medium text-2xl ml-8 mt-3">Education</h3>
@@ -76,7 +76,8 @@ function About() {
           
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-45 w-0.5 bg-green-300"></span>
+                <span className="h-[230px] sm:h-[160px] w-0.5 bg-green-300"></span>
+
             </div>
 
             <div className="text-white">
@@ -88,10 +89,10 @@ function About() {
         </div>
 
         {/* High sec school section */}
-        <div className="flex flex-row items-start p-4 -mt-10">
+        <div className="flex flex-row items-start p-4 -mt-10  "> 
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-38 w-0.5 bg-green-300"></span>
+                <span className="h-[230px] sm:h-[160px] w-0.5 bg-green-300"></span>
             </div>
 
             <div className="text-white">
@@ -106,8 +107,9 @@ function About() {
         <div className="flex flex-row items-start p-4 -mt-10">
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-35 w-0.5 bg-green-300"></span>
+                <span className="h-[175px] sm:h-[140px] w-0.5 bg-green-300"></span>
             </div>
+
 
             <div className="text-white">
                 <h3 className="text-sm font-light">2017 -2019</h3>
@@ -124,7 +126,7 @@ function About() {
         <div className="flex flex-row items-start p-4">
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-45 w-0.5 bg-green-300"></span>
+                <span className="h-[230px] sm:h-[180px] w-0.5 bg-green-300"></span>
             </div>
 
             <div className="text-white">
@@ -140,7 +142,7 @@ function About() {
 
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-32 w-0.5 bg-green-300"></span>
+                <span className="h-[180px] sm:h-[136px] w-0.5 bg-green-300"></span>
             </div>
 
             <div className="text-white">
@@ -154,7 +156,7 @@ function About() {
         <div className="flex flex-row items-start p-4 -mt-10">
             <div className="relative flex flex-col items-center mr-4">
                 <span className="h-3 w-3 bg-green-500 rounded-full mt-1"></span>
-                <span className="h-37 w-0.5 bg-green-300"></span>
+                <span className="h-[180px] sm:h-[136px] w-0.5 bg-green-300"></span>
             </div>
 
             <div className="text-white">

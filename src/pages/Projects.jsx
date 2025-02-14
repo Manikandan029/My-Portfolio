@@ -30,13 +30,13 @@ function Projects() {
         initial={{ opacity: 0, x: -30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ type: "spring", stiffness: 60 }}
-        className="bg-neutral-800 ml-15 pt-15 text-3xl text-white pl-10"
+        className="bg-neutral-800 ml-15 pt-15 text-3xl text-white pl-1 sm:pl-10"
       >
         Projects
       </motion.h1>
-      <span className="h-0.75 w-30 bg-green-300 absolute ml-24 mt-2"></span>
+      <span className="h-0.75 w-30 bg-green-300 absolute ml-15 sm:ml-24 mt-2"></span>
 
-      <div className="flex min-h-screen items-center justify-center bg-neutral-800 px-15 mt-10">
+      <div className="flex min-h-screen items-center justify-center bg-neutral-800 px-15 mt-10 pb-6">
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div

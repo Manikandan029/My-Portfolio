@@ -64,13 +64,13 @@ export default function Contact() {
                 className="w-full min-h-screen"
             >
                 <div className="pt-10 px-6 md:px-16">
-                    <div className="flex flex-col items-center md:items-start mb-4">
+                    <div className="flex flex-col  md:items-start ">
                         <motion.h1
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ type: 'spring', stiffness: 60 }}
                             viewport={{ once: true }}
-                            className="pt-15 text-3xl text-white pl-0 md:pl-40"
+                            className="pt-15 text-3xl text-white -pl-10 "
                         >
                             Contact me
                         </motion.h1>
@@ -79,7 +79,7 @@ export default function Contact() {
                             whileInView={{ scaleX: 1 }}
                             transition={{ duration: 0.5, ease: "easeOut" }}
                             viewport={{ once: true }}
-                            className="h-[3px] w-40 bg-green-300 self-center md:self-start md:ml-40 origin-left"
+                            className="h-[3px] w-40 bg-green-300 md:self-start origin-left"
                         />
                     </div>
                 </div>
@@ -90,7 +90,7 @@ export default function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="max-w-4xl w-full mb-4 backdrop-blur-md border-2 bg-white/20 rounded-lg shadow-md text-white p-5 mx-4"
+                        className="max-w-4xl w-full mb-4 backdrop-blur-md border-2 bg-white/20 rounded-lg shadow-md text-white p-5 mx-4 -mt-25 sm:mt-5"
                     > 
                         <motion.h1 
                             initial={{ opacity: 0, y: -20 }}

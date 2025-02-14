@@ -92,11 +92,11 @@ function HomePage() {
         </motion.div>
 
         {/* Right Section - Image */}
-        <motion.div className="relative mt-10 lg:mt-0 lg:ml-10" whileHover={{ scale: 1.05 }}>
+        <motion.div className="relative mt-15 lg:mt-0 lg:ml-10" whileHover={{ scale: 1.05 }}>
           <motion.img
             src={Image1}
             alt="Your Picture"
-            className="object-cover w-48 sm:w-60 md:w-72 lg:w-80 rounded-lg"
+            className="object-cover w-48 sm:w-60 md:w-72 lg:w-80 rounded-lg mt-5 mb-5 mr-3"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 50 }}

@@ -29,7 +29,7 @@ function Navbar() {
 
             {/* Mobile Menu with Glassmorphism & Slide Effect */}
 {isOpen && (
-    <div className="fixed top-16 left-0 right-0 bg-gradient-to-r from-bg-white/30 to-gray-700 text-white flex flex-col items-center py-3 text-xl rounded-xl shadow-2xl  border-gray-600 backdrop-blur-lg bg-opacity-90 transition-all duration-300 animate-slideDown z-[1000] border-2 mx-5 ">
+    <div className="fixed top-16 left-0 right-0 bg-gradient-to-r from-bg-white/30 to-gray-700 text-white flex flex-col items-center py-3 text-xl rounded-xl shadow-2xl  border-gray-600 backdrop-blur-lg bg-opacity-90 transition-all duration-300 animate-slideDown z-[1000] border-2 mx-8 ">
         <Link to="/" className="px-6 py-3 w-full text-center rounded-md hover:bg-gray-600 hover:text-green-400 transition-all duration-300" onClick={() => setIsOpen(false)}>Home</Link>
         <Link to="/about" className="px-6 py-3 w-full text-center rounded-md hover:bg-gray-600 hover:text-green-400 transition-all duration-300" onClick={() => setIsOpen(false)}>About</Link>
         <Link to="/projects" className="px-6 py-3 w-full text-center rounded-md hover:bg-gray-600 hover:text-green-400 transition-all duration-300" onClick={() => setIsOpen(false)}>Projects</Link>

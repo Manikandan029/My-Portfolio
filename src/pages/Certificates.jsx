@@ -31,11 +31,11 @@ const Certificates = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: 'spring', stiffness: 60 }}
-                className="text-3xl font-medium text-white mb-5 sm:text-3xl pl-15"
+                className="text-3xl font-medium text-white mb-5 sm:text-3xl pl-5 sm:pl-15"
             >
                 Certificates
             </motion.h1>
-            <span className="h-1 w-40 bg-green-300 block mb-6 -mt-5 ml-15 "></span>
+            <span className="h-1 w-40 bg-green-300 block mb-6 -mt-5 ml-5 sm:ml-15"></span>
 
             {/* Category Buttons */}
             <div className="flex gap-10 mt-5 pl-10">
@@ -44,7 +44,7 @@ const Certificates = () => {
                         key={category}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className={`py-1 px-5 text-2xl rounded-3xl shadow bg-neutral-850 font-semibold cursor-pointer transition duration-300 bg-emerald-950 ${
+                        className={`py-1 sm:ml-10 -ml-3 text-2xl rounded-3xl shadow bg-neutral-850 font-semibold cursor-pointer transition duration-300 bg-emerald-950 ${
                             activeCategory === category ? "text-green-300" : "hover:text-green-300"
                         }`}
                         onClick={() => setActiveCategory(category)}
