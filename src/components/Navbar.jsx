@@ -8,7 +8,7 @@ function Navbar() {
     return (
         <>
             {/* Navbar at the top */}
-            <nav className="fixed top-0 left-0 w-full bg-neutral-900 text-white shadow-lg flex justify-between items-center px-6 py-4 md:px-10 z-50">
+            <nav className="fixed top-0 left-0 w-full  sm:bg-neutral-900  bg-neutral-900 text-white shadow-lg flex justify-between items-center px-6 py-4 md:px-10 z-50">
                 {/* Logo or Brand Name */}
                 
 

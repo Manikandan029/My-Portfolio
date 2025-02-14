@@ -90,7 +90,7 @@ export default function Contact() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
                         viewport={{ once: true }}
-                        className="max-w-4xl w-full mx-auto backdrop-blur-md border-2 bg-white/20 rounded-lg shadow-md text-white p-5"
+                        className="max-w-4xl w-full mb-4 backdrop-blur-md border-2 bg-white/20 rounded-lg shadow-md text-white p-5 mx-4"
                     > 
                         <motion.h1 
                             initial={{ opacity: 0, y: -20 }}
@@ -112,7 +112,7 @@ export default function Contact() {
                         </motion.p>
                         <form onSubmit={handleSubmit}>
                             <div className="space-y-10">
-                                <div className="flex flex-col md:flex-row justify-between md:space-x-4">
+                                <div className="flex flex-col md:flex-row justify-between md:space-x-4 ">
                                     <div className="flex flex-col w-full">
                                         <label htmlFor="name" className="text-white mb-1 font-bold">Name:</label>
                                         <input

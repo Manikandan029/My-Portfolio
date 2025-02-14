@@ -31,14 +31,14 @@ const Certificates = () => {
                 initial={{ opacity: 0, x: -30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ type: 'spring', stiffness: 60 }}
-                className="text-3xl font-medium text-white mb-5 sm:text-3xl"
+                className="text-3xl font-medium text-white mb-5 sm:text-3xl pl-15"
             >
                 Certificates
             </motion.h1>
-            <span className="h-1 w-40 bg-green-300 block mb-6 -mt-5"></span>
+            <span className="h-1 w-40 bg-green-300 block mb-6 -mt-5 ml-15 "></span>
 
             {/* Category Buttons */}
-            <div className="flex gap-10 mt-5">
+            <div className="flex gap-10 mt-5 pl-10">
                 {["curriculam", "sports"].map((category) => (
                     <motion.p
                         key={category}
@@ -67,7 +67,7 @@ const Certificates = () => {
                     {categories[activeCategory].map((image, index) => (
                         <motion.div 
                             key={index} 
-                            className="relative overflow-hidden rounded-lg shadow-lg border-4 border-green-700"
+                            className="relative overflow-hidden rounded-lg shadow-lg border-4 border-green-700 ml-8"
                             initial={{ opacity: 0, scale: 0.8 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.6, ease: 'easeOut' }}

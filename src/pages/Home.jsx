@@ -11,7 +11,7 @@ function HomePage() {
     <>
   
       {/* Added pt-16 to prevent content from going under the navbar */}
-      <div className="bg-neutral-800 min-h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-20 pt-16 "
+       <div className="bg-neutral-800   sm:bg-neutral-800  min-h-screen flex flex-col lg:flex-row items-center justify-center px-4 sm:px-6 lg:px-20 pt-16 "
       >
          {/* <ParticlesBackground /> */}
         {/* Left Section */}
@@ -26,8 +26,7 @@ function HomePage() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 80 }}
-            className="text-3xl md:text-4xl font-bold text-green-500 mb-4"
-          >
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-500 mb-4" >
             Manikandan M
           </motion.h1>
 
@@ -36,7 +35,7 @@ function HomePage() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.8, delay: 0.2, type: "spring", stiffness: 80 }}
-            className="text-xl md:text-2xl text-gray-300 mb-4"
+            className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4"
           >
             {text.join("")}
           </motion.h2>
@@ -46,7 +45,8 @@ function HomePage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.5, type: "spring", stiffness: 100 }}
-            className="text-lg md:text-xl text-gray-300 mb-6"
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-6"
+
           >
             Forward-thinking IT specialist with a talent for converting complex challenges into effective solutions. Enthusiastic about
             applying a unique mix of technical skill and creative vision to drive impactful projects and progress in the tech industry.
@@ -57,7 +57,7 @@ function HomePage() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="py-2 px-6 md:px-10 bg-green-500 rounded-lg text-black font-semibold transition duration-300 hover:bg-green-600 mb-6"
+             className="py-2 px-4 sm:px-6 md:px-10 bg-green-500 rounded-lg text-black font-semibold transition duration-300 hover:bg-green-600 mb-6"
               onClick={() => window.open(resume, "_blank")}
             >
               Download CV
@@ -96,7 +96,7 @@ function HomePage() {
           <motion.img
             src={Image1}
             alt="Your Picture"
-            className="object-cover w-60 md:w-72 lg:w-80 rounded-lg"
+            className="object-cover w-48 sm:w-60 md:w-72 lg:w-80 rounded-lg"
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, type: "spring", stiffness: 50 }}
