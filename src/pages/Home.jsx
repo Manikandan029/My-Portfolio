@@ -74,7 +74,7 @@ function HomePage() {
             {[
               { href: "https://github.com/Manikandan029", icon: <FaGithub />, color: "hover:text-green-600" },
               { href: "https://www.linkedin.com/in/-manikandan-m", icon: <FaLinkedin />, color: "hover:text-blue-600" },
-              { href: "https://www.instagram.com/.manikandan._/", icon: <FaInstagram />, color: "hover:text-pink-600" },
+              { href: "https://www.instagram.com/___.manikandan.__/", icon: <FaInstagram />, color: "hover:text-pink-600" },
               { href: "mailto:manivagaimk@gmail.com", icon: <FaEnvelope />, color: "hover:text-yellow-400" },
             ].map(({ href, icon, color }, index) => (
               <motion.a
